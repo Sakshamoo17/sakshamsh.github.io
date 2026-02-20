@@ -91,12 +91,19 @@ header .logo {
   font-weight: 800;
   text-decoration: none;
   color: #0e2431;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .logo img {
+  height: 3rem;
+  width: auto;
 }
 header .logo i {
   font-size: 2.2rem;
 }
 header .logo:hover {
-  color: #fc8c05;
+  color: #827670;
 }
 header .navbar ul {
   list-style: none;
