@@ -38,19 +38,28 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+    // Initialize EmailJS with your public key
+    emailjs.init("urYu9-lFtmAy6KWcn");
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+    $("#contact-form").submit(function (event) {
+        event.preventDefault();
+
+        // Show loading state
+        const submitBtn = $(this).find('button[type="submit"]');
+        const originalText = submitBtn.html();
+        submitBtn.prop('disabled', true).html('Sending...');
+
+        emailjs.sendForm('service_1wtw0mj', 'template_xmziaej', '#contact-form')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
+                alert("Form Submitted Successfully! I'll get back to you soon.");
+                submitBtn.prop('disabled', false).html(originalText);
             }, function (error) {
                 console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
+                alert("Form Submission Failed! Please try again or email me directly.");
+                submitBtn.prop('disabled', false).html(originalText);
             });
-        event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
 
@@ -59,7 +68,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Saksham Sharma";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -71,7 +80,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Full Stack Java Development", "backend development","frontend development"],
+    strings: ["Full Stack Java Development", "Infra Development", "Backend development", "Frontend development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -162,13 +171,25 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 
 
 // pre loader start
-// function loader() {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
-// function fadeOut() {
-//     setInterval(loader, 500);
-// }
-// window.onload = fadeOut;
+(function () {
+    const PRELOADER_DELAY_MS = 1500; // adjust this value (milliseconds) as needed
+
+    function hidePreloader() {
+        const el = document.getElementById('preloader') || document.querySelector('.loader-container');
+        if (!el) return;
+        el.classList.add('fade-out');
+        // remove element after fade animation (keeps DOM clean)
+        setTimeout(() => {
+            if (el && el.parentNode) el.parentNode.removeChild(el);
+        }, 600);
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(hidePreloader, PRELOADER_DELAY_MS);
+    } else {
+        window.addEventListener('load', () => setTimeout(hidePreloader, PRELOADER_DELAY_MS));
+    }
+})();
 // pre loader end
 
 // disable developer mode
@@ -190,18 +211,31 @@ document.onkeydown = function (e) {
     }
 }
 
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
+// // Start of Tawk.to Live Chat
+// var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+// (function () {
+//     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+//     s1.async = true;
+//     s1.src = 'https://embed.tawk.to/6953ac684884dc1981daae58/1jdndiuom';
+//     s1.charset = 'UTF-8';
+//     s1.setAttribute('crossorigin', '*');
+//     s0.parentNode.insertBefore(s1, s0);
+// })();
+// // End of Tawk.to Live Chat
 
+// <!--Start of Tawk.to Script-->
+// <script type="text/javascript">
+// var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+// (function(){
+// var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+// s1.async=true;
+// s1.src='https://embed.tawk.to/6953ac684884dc1981daae58/1jdndiuom';
+// s1.charset='UTF-8';
+// s1.setAttribute('crossorigin','*');
+// s0.parentNode.insertBefore(s1,s0);
+// })();
+// </script>
+// <!--End of Tawk.to Script-->
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({

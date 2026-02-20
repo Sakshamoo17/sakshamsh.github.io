@@ -12,8 +12,28 @@
         "icon":"https://img.icons8.com/color/48/angularjs.png"
     },
     {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        "name": "AWS",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
+    },
+    {
+        "name": "AWSLambda",
+        "icon": "https://img.icons8.com/color/48/awslambda.png"
+    },
+    {
+        "name": "AWS SNS",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/000000/docker.png"
+    },
+    {
+        "name": "GitHubActions",
+        "icon": "https://img.icons8.com/color/48/000000/git.png"
+    },
+    {
+        "name": "REST API",
+        "icon": "https://img.icons8.com/color/48/api-settings.png"
     },
     {
         "name": "MongoDB",
@@ -40,6 +60,10 @@
         "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
     },
     {
+        "name": "TypeScript",
+        "icon": "https://img.icons8.com/color/48/typescript.png"
+    },
+    {
         "name": "Bootstrap",
         "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
     },
@@ -48,12 +72,8 @@
         "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
     },
     {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-        "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
+        "name": "Postman",
+        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png"
     },
     {
         "name": "Linux",
@@ -64,7 +84,7 @@
         "icon": "https://img.icons8.com/fluency/48/test--v1.png"
     },
     {
-        "name": "Junit",
+        "name": "Junit5",
         "icon": "https://img.icons8.com/fluency/48/test--v1.png"
     },
     {
