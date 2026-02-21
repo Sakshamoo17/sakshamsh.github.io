@@ -92,8 +92,7 @@ header {
   justify-content: space-between;
   padding: 1.2rem 10%;
   height: auto;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  background: #ffffff;
   border-bottom: 1px solid rgba(99, 102, 241, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
@@ -526,7 +525,7 @@ header .navbar ul li a:hover {
   display: inline-block;
 }
 .about .row .content p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-top: 1.5rem;
   font-family: "Nunito";
   font-weight: 500;
@@ -545,7 +544,7 @@ header .navbar ul li a:hover {
 .about .row .content .box-container .box p {
   text-transform: none;
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
 }
 .about .row .content .box-container .box p span {
@@ -1340,7 +1339,7 @@ form .button-area {
   font-weight: 700;
 }
 .footer .box-container .box p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #cbd5e1;
   padding: 0.7rem 0;
   text-transform: none;
